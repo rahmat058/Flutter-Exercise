@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -12,7 +13,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: Column(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               Text("Hello 1"),
               Text("Hello 2"),
@@ -24,9 +26,6 @@ class MyApp extends StatelessWidget {
                 onPressed: () {},
               ),
               Text("Hello 5"),
-              Text("Hello 6"),
-              Text("Hello 7"),
-              Text("Hello 8"),
             ],
           )
         ),
