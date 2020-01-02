@@ -23,15 +23,42 @@ class MyApp extends StatelessWidget {
               child: Image.asset("assets/600_466219125.jpeg", fit: BoxFit.cover,)
             ),
 
-
             Container(
               width: double.infinity,
-              height: 250,
-              color: Colors.deepOrange,
-              margin: EdgeInsets.all(20),
-              child: Center(
-                  child: Text("My Secont Container", style: TextStyle(color: Colors.white, fontSize: 20),)
-              ),
+              color: Colors.grey[300],
+              padding: EdgeInsets.only(top: 8, bottom: 8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: <Widget>[
+                  Column(
+                    children: <Widget>[
+                      Icon(Icons.call, color: Colors.blueAccent, size: 40,),
+                      Container(
+                        height: 5,
+                      ),
+                      Text("Call", style: TextStyle(color: Colors.blueAccent, fontSize: 16, fontWeight: FontWeight.bold),)
+                    ],
+                  ),
+                  Column(
+                    children: <Widget>[
+                      Icon(Icons.call, color: Colors.blueAccent, size: 40,),
+                      Container(
+                        height: 5,
+                      ),
+                      Text("Call", style: TextStyle(color: Colors.blueAccent, fontSize: 16, fontWeight: FontWeight.bold),)
+                    ],
+                  ),
+                  Column(
+                    children: <Widget>[
+                      Icon(Icons.call, color: Colors.blueAccent, size: 40,),
+                      Container(
+                        height: 5,
+                      ),
+                      Text("Call", style: TextStyle(color: Colors.blueAccent, fontSize: 16, fontWeight: FontWeight.bold),)
+                    ],
+                  )
+                ],
+              )
             )
           ],
         ),
