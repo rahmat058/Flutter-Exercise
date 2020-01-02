@@ -59,6 +59,31 @@ class MyApp extends StatelessWidget {
                   )
                 ],
               )
+            ),
+
+            Container(
+              width: double.infinity,
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Container(
+                      width: 150,
+                      height: 100,
+                      color: Colors.deepOrangeAccent,
+                    ),
+                    flex: 2,
+                  )
+                  ,
+                  Expanded(
+                    child: Container(
+                      width: 150,
+                      height: 100,
+                      color: Colors.deepPurpleAccent,
+                    ),
+                  )
+
+                ],
+              ),
             )
           ],
         ),
