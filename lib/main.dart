@@ -12,22 +12,29 @@ class MyApp extends StatelessWidget {
     // TODO: implement build
     return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text("Hello 1"),
-              Text("Hello 2"),
-              Text("Hello 3"),
-              Text("Hello 4"),
-              FlatButton(
-                child: Text("Login Text", style: TextStyle(color: Colors.white, fontSize: 18),),
-                color: Colors.blue,
-                onPressed: () {},
+        body: Column(
+          children: <Widget>[
+            Container(
+              width: double.infinity,
+              height: 250,
+              color: Colors.blueAccent,
+              margin: EdgeInsets.all(20),
+              child: Center(
+                  child: Text("My First Container", style: TextStyle(color: Colors.white, fontSize: 20),)
               ),
-              Text("Hello 5"),
-            ],
-          )
+            ),
+
+
+            Container(
+              width: double.infinity,
+              height: 250,
+              color: Colors.deepOrange,
+              margin: EdgeInsets.all(20),
+              child: Center(
+                  child: Text("My Secont Container", style: TextStyle(color: Colors.white, fontSize: 20),)
+              ),
+            )
+          ],
         ),
 
         appBar: AppBar(
