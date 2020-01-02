@@ -19,9 +19,8 @@ class MyApp extends StatelessWidget {
               height: 250,
               color: Colors.blueAccent,
               margin: EdgeInsets.all(20),
-              child: Center(
-                  child: Text("My First Container", style: TextStyle(color: Colors.white, fontSize: 20),)
-              ),
+              padding: EdgeInsets.all(20),
+              child: Image.asset("assets/600_466219125.jpeg", fit: BoxFit.cover,)
             ),
 
 
