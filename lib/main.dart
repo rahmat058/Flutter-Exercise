@@ -12,13 +12,22 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: Center(
-          child: RaisedButton.icon(
-            icon: Icon(Icons.payment, color: Colors.white),
-            label: Text("Register", style: TextStyle(color: Colors.white, fontSize: 16)),
-            color: Colors.blue,
-            onPressed: () {
-
-            },
+          child: Column(
+            children: <Widget>[
+              Text("Hello 1"),
+              Text("Hello 2"),
+              Text("Hello 3"),
+              Text("Hello 4"),
+              FlatButton(
+                child: Text("Login Text", style: TextStyle(color: Colors.white, fontSize: 18),),
+                color: Colors.blue,
+                onPressed: () {},
+              ),
+              Text("Hello 5"),
+              Text("Hello 6"),
+              Text("Hello 7"),
+              Text("Hello 8"),
+            ],
           )
         ),
 
