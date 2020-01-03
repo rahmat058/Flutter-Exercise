@@ -25,6 +25,10 @@ class ProductScreen extends StatelessWidget {
             trailing: Text("\$${products[index].price}", style: TextStyle(color: Colors.redAccent, fontSize: 20, fontWeight: FontWeight.bold),),
             onTap: () {
               _valueSetter(products[index]);
+
+              //Snack Bar Addeed done
+              SnackBar productAddSnackBar = SnackBar(content: Text("Product Added Successfully"),);
+              Scaffold.of(context).showSnackBar(productAddSnackBar);
             },
           );
         },
