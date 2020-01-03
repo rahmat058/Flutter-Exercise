@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/screens/FirstScreen.dart';
 
 void main() {
   runApp(MyApp());
@@ -11,44 +12,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
-      home: CounterWidget()
+      home: FirstScreen()
     );
   }
 }
 
-class CounterWidget extends StatefulWidget {
-  @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    return CounterWidgetState();
-  }
-
-}
-
-class CounterWidgetState extends State<CounterWidget> {
-  var counter = 0;
-
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return Scaffold(
-      body: Center(
-          child: Text("Counter Value is $counter", style: TextStyle(fontSize: 30),)
-      ),
-
-      appBar: AppBar(
-        title: Text("Flutter Application Appbar"),
-      ),
-
-      floatingActionButton: FloatingActionButton(
-        child: Icon(Icons.add),
-        onPressed: () {
-          setState(() {
-            counter++;
-          });
-        },
-      ),
-    );
-  }
-
-}
