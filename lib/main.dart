@@ -7,32 +7,46 @@ void main() {
 
 
 class MyApp extends StatelessWidget {
-
-  List<String> nameOfStudents = ['Anul', 'Kader', 'Jabbar', 'Rahamt', 'Babu', 'Sagor'];
-
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
     return MaterialApp(
-      home: Scaffold(
-        body: ListView.builder(
-          itemBuilder: (context, index) {
-            return ListTile(
-              title: Text(nameOfStudents[index]),
-              subtitle: Text('This is subtitle'),
-              leading: Icon(Icons.add_shopping_cart),
-            );
-          },
-          itemCount: nameOfStudents.length,
-        ),
+      home: CounterWidget()
+    );
+  }
+}
 
-        appBar: AppBar(
-          title: Text("Flutter Application"),
-        ),
+class CounterWidget extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return CounterWidgetState();
+  }
 
-        floatingActionButton: FloatingActionButton(
-          child: Icon(Icons.add),
-        ),
+}
+
+class CounterWidgetState extends State<CounterWidget> {
+  var counter = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    // TODO: implement build
+    return Scaffold(
+      body: Center(
+          child: Text("Counter Value is $counter", style: TextStyle(fontSize: 30),)
+      ),
+
+      appBar: AppBar(
+        title: Text("Flutter Application Appbar"),
+      ),
+
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {
+          setState(() {
+            counter++;
+          });
+        },
       ),
     );
   }
